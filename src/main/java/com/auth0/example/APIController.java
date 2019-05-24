@@ -12,7 +12,7 @@ import org.json.JSONObject;
 @Component
 public class APIController {
 
-    @RequestMapping(value = "/api/public", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "/v1/public", method = RequestMethod.GET, produces = "application/json")
     @ResponseBody
     public String publicEndpoint() {
         return new JSONObject()
@@ -20,7 +20,7 @@ public class APIController {
                 .toString();
     }
 
-    @RequestMapping(value = "/api/private", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "/v1/private", method = RequestMethod.GET, produces = "application/json")
     @ResponseBody
     public String privateEndpoint() {
         return new JSONObject()
@@ -28,7 +28,7 @@ public class APIController {
                 .toString();
     }
 
-    @RequestMapping(value = "/api/private-scoped", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "/v1/private-scoped", method = RequestMethod.GET, produces = "application/json")
     @ResponseBody
     public String privateScopedEndpoint() {
         return new JSONObject()
